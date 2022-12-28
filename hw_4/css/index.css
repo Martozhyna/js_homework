@@ -1,0 +1,23 @@
+body{
+    background: #2F4454;
+}
+
+.product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid #1C3334;
+    background: #376E6F;
+    margin: 10px;
+}
+
+.product-card img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.product-title{
+    color: whitesmoke;
+}
