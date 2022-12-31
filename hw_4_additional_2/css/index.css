@@ -1,0 +1,18 @@
+body {
+    background: linear-gradient(#CE9FFC, #7367F0);;
+}
+
+.users-box {
+    width: 45%;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 20px;
+    border: solid 2px #634890;
+
+}
+
+.user-block{
+
+    text-align: center;
+    color: white;
+}
