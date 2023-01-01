@@ -1,0 +1,24 @@
+body {
+    background: linear-gradient(#FED9B7,#F07167);
+}
+
+.wrap{
+    width: 18%;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: #ff957d;
+}
+
+.post-card {
+    text-align: center;
+    color: white;
+    transition-duration: 300ms;
+
+}
+
+.wrap:hover{
+    font-size: 20px;
+    background: #fda677;
+}
