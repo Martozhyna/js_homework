@@ -321,3 +321,50 @@ form.onsubmit = function (e) {
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додаткова частина для завдання)
+
+let divTable = document.createElement('div');
+divTable.id = 'tableContainer';
+document.body.appendChild(divTable);
+
+let formTable = document.createElement('form');
+document.body.appendChild(formTable);
+
+let inputRows = document.createElement('input');
+formTable.appendChild(inputRows);
+inputRows.type = 'number';
+inputRows.name = 'rows';
+inputRows.min = '1';
+inputRows.max = '10';
+
+let inputCols = document.createElement('input');
+formTable.appendChild(inputCols);
+inputCols.type = 'number';
+inputCols.name = 'cols';
+inputCols.min = '1';
+inputCols.max = '10';
+
+let inputText = document.createElement('input');
+formTable.appendChild(inputText);
+inputText.type = 'text';
+inputText.name = 'text';
+
+let buttonTable = document.createElement('button');
+formTable.appendChild(buttonTable);
+buttonTable.innerText = 'Send';
+
+formTable.onsubmit = function buildTable(e) {
+    e.preventDefault();
+    let table = `Table: ${inputRows.value} x ${inputCols.value}`;
+    table += '<table class="table">';
+    for (let i = 0; i < inputRows.value; i++) {
+        table += '<tr>';
+        for (let j = 0; j < inputCols.value; j++) {
+            table += `<td>${inputText.value} </td> `;
+        }
+        table += '</tr>';
+    }
+    table += '</table>'
+    divTable.innerHTML = table;
+
+}
+
