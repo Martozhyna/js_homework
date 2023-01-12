@@ -99,13 +99,7 @@ console.log(numbers(4, 1));
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 
-let foo = (arr,i) => {
-    for (let j = 0; j < arr.length; j++) {
-        const arrElement = arr[j];
 
-    }
-
-}
 
 //????????????
 
