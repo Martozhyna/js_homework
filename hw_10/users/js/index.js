@@ -1,5 +1,8 @@
 // зробити файл users.html
 // з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
+
+let item = JSON.parse(localStorage.getItem('favs')) || [];
+
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => {
@@ -13,7 +16,15 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let a = document.createElement('a');
             a.innerText = 'User Details';
             a.href = '../users_details/users_details.html?id=' + user.id;
-            divOfUser.appendChild(a);
+
+            let btn = document.createElement('button');
+            btn.innerText = 'add to fav';
+            btn.onclick = function () {
+                item.push(user);
+                localStorage.setItem('favs', JSON.stringify(item));
+            };
+
+            divOfUser.append(a,btn);
         }
     })
 //     вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
